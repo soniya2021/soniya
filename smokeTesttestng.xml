@@ -8,9 +8,9 @@
 	</groups>
   <test thread-count="3" name="Test">
     <classes>
-      <class name="COM.VTIGER.TESTCASE.CreateOrganisationTest1"/>
-      <class name="COM.VTIGER.TESTCASE.CreateContactWithOrganisation"/>
-      <class name="COM.VTIGER.TESTCASE.CreateOrganisationWithIndustry"/>
+      <class name="COM.VTIGER.TESTCASE.CreateOrganisationTest"/>
+      <class name="COM.VTIGER.TESTCASE.CreateContactWithOrganisationTest"/>
+      <class name="COM.VTIGER.TESTCASE.CreateOrganisationWithIndustryTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

@@ -3,11 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="DifferentScenario.LensKart2">
+      <class name="COM.VTIGER.TESTCASE.CreateContactWithOrganisationTest">
         <methods>
-          <include name="olympicsTest"/>
+          <include name="connectDatabase"/>
+          <include name="logOut"/>
+          <include name="openBrowser"/>
+          <include name="CloseBrowser"/>
+          <include name="createContactWithOrganisation"/>
+          <include name="disconnectDatabase"/>
+          <include name="login"/>
         </methods>
-      </class> <!-- DifferentScenario.LensKart2 -->
+      </class> <!-- COM.VTIGER.TESTCASE.CreateContactWithOrganisationTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

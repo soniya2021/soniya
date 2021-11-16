@@ -1,6 +1,5 @@
 package VTiger.GenericUtil;
 
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.util.HashMap;
 
@@ -15,7 +14,8 @@ public class JSONFileUtility {
 			FileReader fr = new FileReader("./Data/commondata.json");
 			JSONParser jp= new JSONParser();
 	         Object jobj = jp.parse(fr);
-			  HashMap obj = (HashMap)jobj;
+			  @SuppressWarnings("rawtypes")
+			HashMap obj = (HashMap)jobj;
 			Object value = obj.get(key);
 			return (String) value;
 			

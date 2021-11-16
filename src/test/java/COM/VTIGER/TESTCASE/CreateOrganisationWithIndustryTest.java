@@ -1,5 +1,6 @@
 package COM.VTIGER.TESTCASE;
 import org.openqa.selenium.By;
+
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
@@ -7,9 +8,9 @@ import VTiger.GenericUtil.BaseClass;
 import VTiger.GenericUtil.ExcelUtility;
 import VTiger.GenericUtil.JavaUtility;
 
-public class CreateOrganisationWithIndustry extends BaseClass
+public class CreateOrganisationWithIndustryTest extends BaseClass
 {
-@Test
+@Test(groups="regression")
 public void createOrganisationWithIndustry() throws Throwable
 {
 	ExcelUtility eUtil =  new ExcelUtility();

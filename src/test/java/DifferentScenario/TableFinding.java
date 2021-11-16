@@ -14,6 +14,7 @@ public class TableFinding
 {
 	public static void main(String[] args)
 	{
+		@SuppressWarnings("unused")
 		WebDriverUtility  wUtil= new WebDriverUtility();
 		{
 			System.setProperty("webdriver.chrome.driver",".\\driver\\chromedriver.exe");

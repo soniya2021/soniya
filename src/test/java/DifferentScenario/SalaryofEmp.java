@@ -1,17 +1,8 @@
 package DifferentScenario;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FilterInputStream;
-import java.util.concurrent.TimeUnit;
-
-import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-
-import VTiger.GenericUtil.WebDriverUtility;
 
 public class SalaryofEmp
 {

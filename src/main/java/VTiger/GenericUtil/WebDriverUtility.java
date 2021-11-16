@@ -1,10 +1,8 @@
 package VTiger.GenericUtil;
 
-import java.awt.AWTException;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
 import java.io.File;
-import java.io.IOException;
 import java.util.Iterator;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
@@ -17,7 +15,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.google.common.io.Files;
@@ -25,6 +22,7 @@ import com.google.common.io.Files;
 public class WebDriverUtility {
 
 
+	@SuppressWarnings("unused")
 	private static final String While = null;
 	public void SelectByIndex(WebElement ele,int index) {
 	Select sel = new Select(ele);
@@ -72,6 +70,7 @@ public class WebDriverUtility {
 		}
 		}
 	 }
+	@SuppressWarnings("unused")
 	private void While() {
 		// TODO Auto-generated method stub
 		

@@ -11,7 +11,7 @@
 </groups>
   <test thread-count="5" name="Test">
     <classes>
-      <class name="COM.VTIGER.TESTCASE.CreateOrganization"/>
+      <class name="COM.VTIGER.TESTCASE.CreateOrganizationTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

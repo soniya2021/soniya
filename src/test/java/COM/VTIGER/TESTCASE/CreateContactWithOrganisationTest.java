@@ -1,32 +1,24 @@
 package COM.VTIGER.TESTCASE;
 
-import java.util.Set;
-
-import java.util.concurrent.TimeUnit;
-
-import org.json.simple.parser.JSONParser;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
+
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 
 import VTiger.GenericUtil.BaseClass;
-import VTiger.GenericUtil.ExcelUtility;
 import VTiger.GenericUtil.JavaUtility;
-import VTiger.GenericUtil.PropertyFileUtility;
-import VTiger.GenericUtil.WebDriverUtility;
 
-public class CreateContactWithOrganisation extends BaseClass {
+public class CreateContactWithOrganisationTest extends BaseClass {
 
 
 	@Test(groups="smokeTest")
 	public  void createContactWithOrganisation() throws Throwable {
 
 	
+		@SuppressWarnings("unused")
 		String firstName = eUtil.excelUtility("Sheet1", 4, 2)+"_" + JavaUtility.generateRandomNumber();
+		@SuppressWarnings("unused")
 		String lastName = eUtil.excelUtility("Sheet1", 4, 3)+"_" + JavaUtility.generateRandomNumber();
 		String searchType = eUtil.excelUtility("Sheet1", 4, 4);
 

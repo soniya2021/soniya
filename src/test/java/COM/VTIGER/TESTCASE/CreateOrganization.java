@@ -1,20 +1,13 @@
 package COM.VTIGER.TESTCASE;
 
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
 
 
 import VTiger.GenericUtil.BaseClass;
-import VTiger.GenericUtil.ExcelUtility;
-import VTiger.GenericUtil.JSONFileUtility;
-import VTiger.GenericUtil.PropertyFileUtility;
 
 public class CreateOrganization  extends BaseClass{
 

@@ -1,7 +1,5 @@
 package VTiger.GenericUtil;
 
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -21,13 +19,13 @@ public class BaseClass {
 
 	public static WebDriver driver;
 
-	@BeforeSuite//(groups= {"smokeTest","regressionTest"})
+	@BeforeSuite(groups= {"smokeTest","regressionTest"})
 	public void connectDatabase()
 	{
 		System.out.println("connect to Database");
 	}
 
-	@BeforeClass//(groups={"smokeTest","regressionTest"})
+	@BeforeClass(groups={"smokeTest","regressionTest"})
 	public void openBrowser() throws Throwable
 	{
 		//open the browser
@@ -36,7 +34,7 @@ public class BaseClass {
 		driver.manage().window().maximize();
 		wUtil.WaitForPageLoad(driver);
 	}
-	@BeforeMethod//(groups={"smokeTest","RegressionTest"})
+	@BeforeMethod(groups={"smokeTest","RegressionTest"})
 	public void login() throws Throwable
 	{
 		//login into the application
@@ -47,7 +45,7 @@ public class BaseClass {
 		driver.findElement(By.xpath("//input[@name=\"user_password\"]")).sendKeys(PWD);
 		driver.findElement(By.id("submitButton")).click();
 	}
-	@AfterMethod//(groups={"smokeTest","regressionTest"})
+	@AfterMethod(groups={"smokeTest","regressionTest"})
 	public void logOut() throws Throwable
 	{
 		//logout from application
@@ -56,12 +54,12 @@ public class BaseClass {
 		wUtil.mouseover(driver,admImg);
 		driver.findElement(By.xpath("//a[text()='Sign Out']")).click();
 	}
-	@AfterClass//(groups={"smokeTest","RegressionTest")
+	@AfterClass(groups={"smokeTest","regressionTest"})
 	public void CloseBrowser()
 	{
 		driver.close();
 	}
-	@AfterSuite//(groups= {"smokeTest","regressionTest"})
+	@AfterSuite(groups= {"smokeTest","regressionTest"})
 	public void disconnectDatabase()
 	{
 		System.out.println("close connection from Database");

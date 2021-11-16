@@ -14,6 +14,7 @@ public class OrgTable
 {
 	public static void main(String[] args)
 	{
+		@SuppressWarnings("unused")
 		WebDriverUtility  wUtil= new WebDriverUtility();
 		{
 			System.setProperty("webdriver.chrome.driver",".\\driver\\chromedriver.exe");
@@ -29,7 +30,8 @@ public class OrgTable
 				driver.findElement(By.linkText("Organizations")).click();
 				
 		
-			     List<WebElement> colcount =  driver.findElements(By.xpath("//table[@class=//tbody/tr[*]/td[3]"));
+			     @SuppressWarnings("unused")
+				List<WebElement> colcount =  driver.findElements(By.xpath("//table[@class=//tbody/tr[*]/td[3]"));
 			     List<WebElement> rowcount =  driver.findElements(By.xpath("//table[@class=//tbody/td[2]"));
 				
 				System.out.println(rowcount.size());

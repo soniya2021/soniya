@@ -3,10 +3,9 @@ package COM.VTIGER.TESTCASE;
 import java.util.concurrent.TimeUnit;
 
 
+
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
@@ -14,13 +13,12 @@ import org.testng.annotations.Test;
 import VTiger.GenericUtil.BaseClass;
 import VTiger.GenericUtil.ExcelUtility;
 import VTiger.GenericUtil.JavaUtility;
-import VTiger.GenericUtil.PropertyFileUtility;
 
 
-public class CreateOrganisationTest1 extends BaseClass
+public class CreateOrganisationTest extends BaseClass
 {
-@Test
-	public  void createorganizationTest1() throws Throwable 
+@Test(groups="regression")
+	public  void createorganization() throws Throwable 
 	{
 		driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
 		ExcelUtility eUtil=new ExcelUtility();

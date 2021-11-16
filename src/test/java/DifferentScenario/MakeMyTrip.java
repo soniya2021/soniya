@@ -9,8 +9,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import VTiger.GenericUtil.WebDriverUtility;
-
 public class MakeMyTrip {
 
 	@Test(dataProvider = "maketripdate")
@@ -21,9 +19,13 @@ public class MakeMyTrip {
 		String s= date.toString();
 
 		String [] arr=s.split("");
+		@SuppressWarnings("unused")
 		String day= arr[0];
+		@SuppressWarnings("unused")
 		String month= arr[1];
+		@SuppressWarnings("unused")
 		String currentdate= arr[2];
+		@SuppressWarnings("unused")
 		String year= arr[5];
         
 		System.setProperty("webdriver.chrome.driver",".\\driver\\chromedriver.exe");

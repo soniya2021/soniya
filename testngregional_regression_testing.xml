@@ -3,9 +3,9 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="com.vTiger.testcases.CreateOrganization">
+      <class name="com.vTiger.testcases.CreateOrganizationTest">
       <methods>
-      <include name="createOrganisationWithIndustry"/>
+      <include name="createOrganisationWithIndustryTest"/>
       </methods>
       </class>
     </classes>

@@ -1,9 +1,11 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>SDET1-PROJECT</groupId>
-  <artifactId>SDET1-PROJECT</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <dependencies>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>SDET1-PROJECT</groupId>
+	<artifactId>SDET1-PROJECT</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<dependencies>
 		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
@@ -42,14 +44,14 @@
 			<version>8.0.21</version>
 		</dependency>
 
-<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
-<dependency>
-    <groupId>org.apache.poi</groupId>
-    <artifactId>poi</artifactId>
-    <version>3.17</version>
-</dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+			<version>3.17</version>
+		</dependency>
 
-<!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
+		<!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
 		<dependency>
 			<groupId>commons-io</groupId>
 			<artifactId>commons-io</artifactId>
@@ -57,25 +59,100 @@
 		</dependency>
 
 
-<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
-<dependency>
-    <groupId>org.apache.poi</groupId>
-    <artifactId>poi-ooxml</artifactId>
-    <version>3.17</version>
-</dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>3.17</version>
+		</dependency>
 
 	</dependencies>
-  
-  <properties>
+
+	<build>
+		<plugins>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>3.0.0-M5</version>
+				<configuration>
+					<suiteXmlFiles>
+						<suiteXmlFile>testng_BATCH.xml</suiteXmlFile>
+					</suiteXmlFiles>
+				</configuration>
+			</plugin>
+
+		</plugins>
+	</build>
+
+
+	<profiles>
+
+		<profile>
+			<id>smokeTest</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-surefire-plugin</artifactId>
+						<version>3.0.0-M5</version>
+						<configuration>
+							<suiteXmlFiles>
+								<suiteXmlFile>smokeTesttestng.xml</suiteXmlFile>
+							</suiteXmlFiles>
+						</configuration>
+					</plugin>
+
+				</plugins>
+			</build>
+		</profile>
+
+
+		<profile>
+			<id>full _Regression</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-surefire-plugin</artifactId>
+
+						<version>3.0.0-M5</version>
+						<configuration>
+							<suiteXmlFiles>
+								<suiteXmlFile>testng_full _RegressionTest.xml</suiteXmlFile>
+							</suiteXmlFiles>
+						</configuration>
+					</plugin>
+
+				</plugins>
+			</build>
+		</profile>
+
+		<profile>
+			<id>regression</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-surefire-plugin</artifactId>
+						<version>3.0.0-M5</version>
+						<configuration>
+							<suiteXmlFiles>
+								<suiteXmlFile>testngregressionTest.xml</suiteXmlFile>
+							</suiteXmlFiles>
+						</configuration>
+					</plugin>
+
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
+	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>1.7</maven.compiler.source>
 		<maven.compiler.target>1.7</maven.compiler.target>
 		<aspectj.version>1.8.10</aspectj.version>
 	</properties>
-  
  
-  
-  
-  
-  
-</project>
+ </project>
+

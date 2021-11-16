@@ -3,18 +3,18 @@
 <suite name="Suite" parallel="tests" thread-count="2">
 	<test name="Test_Runner1">
 		<classes>
-			<class name="com.vTiger.testcases.CreateOrganization">
+			<class name="com.vTiger.testcases.CreateOrganizationTest">
 				<methods>
-					<include name="createOrganisationTest1" />
+					<include name="createOrganisationTest" />
 				</methods>
 			</class>
 		</classes>
 	</test> <!-- Test -->
 	<test name="Test_Runner2">
 		<classes>
-			<class name="com.vTiger.testcases.CreateOrganization">
+			<class name="com.vTiger.testcases.CreateOrganizationTest">
 				<methods>
-					<include name="CreateOrganisationWithIndustry" />
+					<include name="CreateOrganisationWithIndustryTest" />
 				</methods>
 			</class>
 		</classes>

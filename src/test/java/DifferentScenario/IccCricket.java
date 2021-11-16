@@ -10,14 +10,13 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import com.google.common.collect.Multiset.Entry;
-
 import VTiger.GenericUtil.WebDriverUtility;
 
 public class IccCricket {
 
 public static void main(String[] args)
 {
+	@SuppressWarnings("unused")
 	WebDriverUtility  wUtil= new WebDriverUtility();
 	{
 		System.setProperty("webdriver.chrome.driver",".\\driver\\chromedriver.exe");
